@@ -14,7 +14,7 @@ ADD ./index.js /wk/
 ADD ./robot.js /wk/
 WORKDIR /wk
 COPY --from=dep /sample/node_modules ./node_modules
-RUN ["npm", "rebuild", "-q"]
+#RUN ["npm", "rebuild", "-q"]
 
 EXPOSE 3000
 
