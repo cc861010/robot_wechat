@@ -1,6 +1,3 @@
-# READ ME
-
-```
 {
   "/me": {
     "desc": "check out current user information",
@@ -169,48 +166,3 @@
     ]
   }
 }
-
-
-```
-## Run
-
-```shell
-# 0. Enable LOG
-export WECHATY_LOG=silly
-
-# 1. by node
-./run-by-node.sh
-
-# 2. by docker
-./run-by-docker.sh
-```
-
-
-## Message subscription
-
-```
-
- new WebSocket("ws://127.0.0.1:3000/").onmessage = (event) => {
-        console.info(event.data);
- };
-
-
-    or
-
-
- ws = new WebSocket("ws://127.0.0.1:3000/")
-
- ws.onopen = function(event) {
-    console.log("WebSocket is open now.");
- };
-
- ws.onclose = function(event) {
-  console.log("WebSocket is closed now.");
- };
-
- ws.onmessage = function(event) {
-  console.info(event.data);
- };
-
-
-```
