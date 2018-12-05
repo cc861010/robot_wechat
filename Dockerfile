@@ -7,7 +7,7 @@
  ADD ./index.js /wk/
  ADD ./robot.js /wk/
  WORKDIR /wk
- COPY --from=dep /sample/node_modules ./node_modules
+ #COPY --from=dep /sample/node_modules ./node_modules
 RUN ["npm", "i", "--only=production"]
 
  EXPOSE 3000
