@@ -1,12 +1,12 @@
 FROM zixia/wechaty
 
-WORKDIR /bot
-ADD ./listeners ./listeners
-ADD ./route ./route
-ADD ./package.json .
-ADD ./config.js .
-ADD ./index.js .
-ADD ./robot.js .
+
+ADD ./listeners /bot/listeners
+ADD ./route /bot/route
+ADD ./package.json /bot
+ADD ./config.js /bot
+ADD ./index.js /bot
+ADD ./robot.js /bot
 
 RUN npm install --production
 
