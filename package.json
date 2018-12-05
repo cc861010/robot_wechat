@@ -17,6 +17,7 @@
   "author": "Chen chao <chenchao@99114.com>",
   "license": "private",
   "dependencies": {
+    "wechaty-puppet-puppeteer":"^0.14.1",
     "babel-register": "^6.26.0",
     "dingtalk-robot": "^1.0.3",
     "fastify": "^1.13.0",

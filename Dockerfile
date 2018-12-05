@@ -1,5 +1,40 @@
+FROM mhart/alpine-node:7
+LABEL maintainer="Huan LI <zixia@zixia.net>"
 
- FROM mhart/alpine-node:10
+RUN  apk update && apk upgrade \
+  && apk add \
+      bash \
+      ca-certificates \
+      chromium-chromedriver \
+      chromium \
+      coreutils \
+      curl \
+      ffmpeg \
+      figlet \
+      jq \
+      moreutils \
+      ttf-freefont \
+      udev \
+      vim \
+      xauth \
+      xvfb \
+  && rm -rf /tmp/* /var/cache/apk/*
+
+RUN mkdir /wechaty
+WORKDIR /wechaty
+
+# npm `chromedriver` not support alpine linux
+# https://github.com/giggio/node-chromedriver/issues/70
+COPY package.json .
+RUN  sed -i '/chromedriver/d' package.json \
+  && npm --silent --progress=false install > /dev/null \
+  && rm -fr /tmp/* ~/.npm
+
+
+
+
+
+# FROM mhart/alpine-node:10
  
  RUN apk update \
     && apk add tzdata \
