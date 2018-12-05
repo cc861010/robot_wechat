@@ -1,6 +1,11 @@
 
  FROM mhart/alpine-node:10
  
+ RUN apk update \
+    && apk add tzdata \
+    && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    && echo "Asia/Shanghai" > /etc/timezone
+ 
  ADD ./listeners /wk/listeners
  ADD ./route /wk/route
  ADD ./package.json /wk/
