@@ -174,15 +174,8 @@
 ```
 ## Run
 
-```shell
-# 0. Enable LOG
-export WECHATY_LOG=silly
-
-# 1. by node
-./run-by-node.sh
-
-# 2. by docker
-./run-by-docker.sh
+```
+    docker run --rm -p 3000:3000 cc861010/robot_wechat
 ```
 
 
