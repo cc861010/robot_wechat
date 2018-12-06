@@ -57,11 +57,11 @@ ADD ./config.js /bot
 ADD ./index.js /bot
 ADD ./robot.js /bot
 
-RUN npm install && sudo rm -fr /tmp/* ~/.npm
+# RUN npm install && sudo rm -fr /tmp/* ~/.npm
 
-EXPOSE 3000
+# EXPOSE 3000
 
-CMD [ "node", "index.js" ]
+# CMD [ "node", "index.js" ]
 
 
 
