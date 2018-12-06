@@ -17,13 +17,14 @@
   "author": "Chen chao <chenchao@99114.com>",
   "license": "private",
   "dependencies": {
-    "wechaty":"0.22.4",
     "fastify": "^1.13.0",
     "fastify-ws": "^1.0.0",
     "finis": "^0.4.3",
     "limiter": "^1.1.3",
     "qrcode-terminal": "^0.12.0",
     "request": "^2.88.0",
+    "wechaty": "^0.22.4",
+    "wechaty-puppet-puppeteer": "^0.14.1",
     "ws": "latest"
   }
 }
