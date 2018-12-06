@@ -4,12 +4,16 @@ ONBUILD ARG NODE_ENV
 ONBUILD ENV NODE_ENV $NODE_ENV
 
 ONBUILD WORKDIR /bot
+ONBUILD ADD ./listeners /bot/listeners
+ONBUILD ADD ./route /bot/route
+ONBUILD ADD ./package.json /bot
+ONBUILD ADD ./config.js /bot
+ONBUILD ADD ./index.js /bot
+ONBUILD ADD ./robot.js /bot
 
-ONBUILD COPY package.json .
 ONBUILD RUN jq 'del(.dependencies.wechaty)' package.json | sponge package.json \
     && npm install \
     && sudo rm -fr /tmp/* ~/.npm
-ONBUILD COPY . .
 
 CMD [ "npm", "start" ]
 
