@@ -1,7 +1,7 @@
 {
   "name": "robot_wechat",
   "version": "0.1.0",
-  "description": "robot wechat  in Node.js",
+  "description": "robot wechat http server in Node.js",
   "main": "index.js",
   "engines": {
     "node": ">= 10"
@@ -18,7 +18,7 @@
   "license": "private",
   "dependencies": {
     "wechaty":"0.22.4",
-    "wechaty-puppet-puppeteer":"0.14.2"
+    "wechaty-puppet-puppeteer":"0.14.2",
     "babel-register": "^6.26.0",
     "dingtalk-robot": "^1.0.3",
     "fastify": "^1.13.0",
@@ -30,8 +30,5 @@
     "request": "^2.88.0",
     "wechaty": "^0.22.4",
     "ws": "latest"
-  },
-  "devDependencies": {
-    "check-node-version": "^3.2.0"
   }
 }
