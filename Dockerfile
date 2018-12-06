@@ -57,21 +57,10 @@ ADD ./config.js /bot
 ADD ./index.js /bot
 ADD ./robot.js /bot
 
-# RUN npm install && sudo rm -fr /tmp/* ~/.npm
+RUN npm install 
+RUN rm -fr /tmp/* ~/.npm
 
-# EXPOSE 3000
+EXPOSE 3000
 
-# CMD [ "node", "index.js" ]
+CMD [ "node", "index.js" ]
 
-
-
-# FROM zixia/wechaty
-# ADD ./listeners /bot/listeners
-# ADD ./route /bot/route
-# ADD ./package.json /bot
-# ADD ./config.js /bot
-# ADD ./index.js /bot
-# ADD ./robot.js /bot
-# RUN npm install --production
-# EXPOSE 3000
-# CMD ["node","index.js"]
