@@ -8,7 +8,7 @@ const fastify = require('fastify')({
     }
 })
 
-fastify.listen(3000, function (err, address) {
+fastify.listen(3000,"0.0.0.0",function (err, address) {
     if (err) {
         fastify.log.error(err)
         process.exit(1)
