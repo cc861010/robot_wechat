@@ -1,4 +1,11 @@
-# READ ME
+```
+# Run
+
+```
+    docker run --rm -p 3000:3000 cc861010/robot_wechat
+```
+
+## HTTP API
 
 ```
 {
@@ -170,13 +177,6 @@
   }
 }
 
-
-```
-## Run
-
-```
-    docker run --rm -p 3000:3000 cc861010/robot_wechat
-```
 
 
 ## Message subscription
