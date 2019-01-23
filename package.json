@@ -14,7 +14,7 @@
     "url": "git@192.168.1.40:cc/robot_wechat.git"
   },
   "keywords": [],
-  "author": "Chen chao <chenchao@99114.com>",
+  "author": "",
   "license": "private",
   "dependencies": {
     "fastify": "^1.13.0",
